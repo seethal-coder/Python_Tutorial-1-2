@@ -1,0 +1,21 @@
+
+def sort_elements(elements):
+    n = len(elements)
+    for i in range(n-1):
+        for j in range(n-i-1):
+            if elements[j] > elements[j+1]:
+                elements[j], elements[j+1] = elements[j+1], elements[j]
+    return elements
+
+def main():
+    elements = []
+    num_inputs = int(input("Enter the number of elements: "))
+    for i in range(num_inputs):
+        element = int(input(f"Enter element {i+1}: "))
+        elements.append(element)
+
+    sorted_elements = sort_elements(elements)
+    print("Sorted elements in ascending order:", sorted_elements)
+
+if __name__ == "__main__":
+    main()

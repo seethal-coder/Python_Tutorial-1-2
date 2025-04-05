@@ -1,0 +1,25 @@
+
+import math
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+def sin_x(x, n):
+    result = 0
+    for i in range(n):
+        sign = (-1)**i
+        term = (x**(2*i+1)) / factorial(2*i+1)
+        result += sign * term
+    return result
+
+x = float(input("Enter the value of x: "))
+n = int(input("Enter the number of terms: "))
+
+result = sin_x(x, n)
+print(f"The value of sin({x}) up to {n} terms is: {result}")
+
+
+print(f"The actual value of sin({x}) is: {math.sin(x)}")

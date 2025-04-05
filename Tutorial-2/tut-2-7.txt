@@ -1,0 +1,11 @@
+
+
+def convert_to_upper(s):
+    return s.upper()
+
+
+s = input("Enter a string: ")
+
+result = convert_to_upper(s)
+print("Result:", result)
+

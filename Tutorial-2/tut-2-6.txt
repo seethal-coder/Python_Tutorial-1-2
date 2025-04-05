@@ -1,0 +1,10 @@
+
+def remove_substring(s, sub):
+    return s.replace(sub, '')
+
+s = input("Enter a string: ")
+sub = input("Enter a substring to remove: ")
+
+result = remove_substring(s, sub)
+print("Result:", result)
+

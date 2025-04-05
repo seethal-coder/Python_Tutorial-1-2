@@ -1,0 +1,20 @@
+
+def remove_words(input_string, words_to_remove):
+    words = input_string.split()
+    filtered_words = [word for word in words if word.lower() not in [remove_word.lower() for remove_word in words_to_remove]]
+    return ' '.join(filtered_words)
+
+def main():
+    input_string = input("Enter a string: ")
+    num_words_to_remove = int(input("Enter the number of words to remove: "))
+    words_to_remove = []
+    for i in range(num_words_to_remove):
+        word = input(f"Enter word {i+1} to remove: ")
+        words_to_remove.append(word)
+
+    result = remove_words(input_string, words_to_remove)
+    print(f"The string after removing the given words is: {result}")
+
+if __name__ == "__main__":
+    main()
+

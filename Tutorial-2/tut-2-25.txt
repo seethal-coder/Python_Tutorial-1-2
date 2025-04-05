@@ -1,0 +1,39 @@
+
+def separate_numbers(numbers):
+    integers = [num for num in numbers if isinstance(num, int)]
+    floats = [num for num in numbers if isinstance(num, float)]
+    complex_numbers = [num for num in numbers if isinstance(num, complex)]
+
+    return integers, floats, complex_numbers
+
+def get_user_input():
+    numbers = []
+    num_inputs = int(input("Enter the number of numbers: "))
+
+    for i in range(num_inputs):
+        while True:
+            try:
+                num = input(f"Enter number {i+1} (int/float/complex): ")
+                if '+' in num or '-' in num:
+                    num = complex(num)
+                elif '.' in num:
+                    num = float(num)
+                else:
+                    num = int(num)
+                numbers.append(num)
+                break
+            except ValueError:
+                print("Invalid input. Please enter a valid number.")
+
+    return numbers
+
+def main():
+    numbers = get_user_input()
+    integers, floats, complex_numbers = separate_numbers(numbers)
+
+    print("Integers:", integers)
+    print("Floats:", floats)
+    print("Complex Numbers:", complex_numbers)
+
+if __name__ == "__main__":
+    main()

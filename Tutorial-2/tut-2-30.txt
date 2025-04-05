@@ -1,0 +1,17 @@
+
+def remove_duplicates(input_list):
+    input_list[:] = list(set(input_list))
+
+def main():
+    input_list = []
+    num_inputs = int(input("Enter the number of elements: "))
+    for i in range(num_inputs):
+        element = input(f"Enter element {i+1}: ")
+        input_list.append(element)
+
+    print("Original list:", input_list)
+    remove_duplicates(input_list)
+    print("List after removing duplicates:", input_list)
+
+if __name__ == "__main__":
+    main()

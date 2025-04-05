@@ -1,0 +1,16 @@
+
+
+
+def reverse_halves(s):
+    middle = len(s) // 2
+    first_half = s[:middle][::-1]
+    second_half = s[middle:][::-1]
+    return first_half + second_half
+
+
+s = input("Enter a string: ")
+
+
+result = reverse_halves(s)
+print("Result:", result)
+

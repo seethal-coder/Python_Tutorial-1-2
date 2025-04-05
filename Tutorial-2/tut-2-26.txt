@@ -1,0 +1,38 @@
+
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def separate_numbers(numbers):
+    prime_numbers = []
+    composite_numbers = []
+    for num in numbers:
+        if is_prime(num):
+            prime_numbers.append(num)
+        else:
+            composite_numbers.append(num)
+    return prime_numbers, composite_numbers
+
+def main():
+    numbers = []
+    num_inputs = int(input("Enter the number of positive numbers: "))
+    for i in range(num_inputs):
+        while True:
+            num = int(input(f"Enter positive number {i+1}: "))
+            if num > 0:
+                numbers.append(num)
+                break
+            else:
+                print("Please enter a positive number.")
+
+    prime_numbers, composite_numbers = separate_numbers(numbers)
+
+    print("Prime numbers:", prime_numbers)
+    print("Composite numbers:", composite_numbers)
+
+if __name__ == "__main__":
+    main()

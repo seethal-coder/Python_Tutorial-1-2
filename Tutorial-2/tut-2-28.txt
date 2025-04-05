@@ -1,0 +1,24 @@
+
+def set_operations():
+    # Create two sets
+    set1 = set(input("Enter elements of set 1 (space-separated): ").split())
+    set2 = set(input("Enter elements of set 2 (space-separated): ").split())
+
+    # Print the sets
+    print("Set 1:", set1)
+    print("Set 2:", set2)
+
+    
+    print("Union:", set1.union(set2))
+    print("Intersection:", set1.intersection(set2))
+    print("Difference:", set1.difference(set2))
+    print("Symmetric Difference:", set1.symmetric_difference(set2))
+    print("Subset:", set1.issubset(set2))
+    print("Superset:", set1.issuperset(set2))
+
+def main():
+    set_operations()
+
+if __name__ == "__main__":
+    main()
+

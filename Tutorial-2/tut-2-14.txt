@@ -1,0 +1,15 @@
+
+
+import math
+
+def nCr(n, r):
+    if r > n:
+        return "Invalid input: r cannot be greater than n"
+    else:
+        return math.comb(n, r)
+
+n = int(input("Enter the value of n: "))
+r = int(input("Enter the value of r: "))
+
+result = nCr(n, r)
+print(f"{n}C{r} = {result}")

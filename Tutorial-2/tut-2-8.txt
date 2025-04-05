@@ -1,0 +1,12 @@
+
+def replace_substring(s, old, new):
+    return s.replace(old, new)
+
+
+s = input("Enter a string: ")
+old = input("Enter the substring to replace: ")
+new = input("Enter the new substring: ")
+
+result = replace_substring(s, old, new)
+print("Result:", result)
+

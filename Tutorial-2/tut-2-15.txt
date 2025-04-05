@@ -1,0 +1,28 @@
+
+def check_even_odd(n):
+    if n % 2 == 0:
+        return "Even"
+    else:
+        return "Odd"
+
+def generate_factors(n):
+    factors = []
+    for i in range(1, n + 1):
+        if n % i == 0:
+            factors.append(i)
+    return factors
+
+def check_zero_positive_negative(n):
+    if n == 0:
+        return "Zero"
+    elif n > 0:
+        return "Positive"
+    else:
+        return "Negative"
+
+n = int(input("Enter the number"))
+print("Even/Odd:", check_even_odd(n))
+print("Factors:", generate_factors(n))
+print("Zero/Positive/Negative:", check_zero_positive_negative(n))
+
+

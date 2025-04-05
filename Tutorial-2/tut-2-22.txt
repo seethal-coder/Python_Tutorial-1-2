@@ -1,0 +1,22 @@
+
+def find_median(numbers):
+    numbers.sort()
+    n = len(numbers)
+    if n % 2 == 0:
+        median = (numbers[n//2 - 1] + numbers[n//2]) / 2
+    else:
+        median = numbers[n//2]
+    return median
+
+def main():
+    numbers = []
+    num_inputs = int(input("Enter the number of numbers: "))
+    for i in range(num_inputs):
+        num = float(input(f"Enter number {i+1}: "))
+        numbers.append(num)
+
+    median = find_median(numbers)
+    print(f"The median of the numbers is: {median}")
+
+if __name__ == "__main__":
+    main()

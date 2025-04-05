@@ -1,0 +1,12 @@
+
+def replace_spaces(s):
+    if ' ' in s:
+        return s.replace(' ', '*')
+    else:
+        return '$' + s + '$'
+
+s = input("Enter a string: ")
+
+
+result = replace_spaces(s)
+print("Result:", result)
