@@ -1,0 +1,22 @@
+import math
+def rootz(a,b,c):
+  discrim=b**2-4ac
+  if(discrim>0):
+   root1=-b+math.sqrt(discrim)//2*a
+   root2=-b-math.sqrt(discrim)//2*a
+  elif(discrim==0):
+    root1=(-b/(2*a))
+    root2=-b/(2*a)
+  else:
+    real=-b/2*a
+    imagin=math.sqrt(-discrim)/2*a
+    root1=Complex(real,imagin)
+    root2=Complex(real,-imagin)
+   
+ return root1,root2
+ a=int(input("enter coefficient of x^2"))
+ b=int(input("enter coefficient of x"))
+ c=int(input("enter constant"))
+ root1,root2=rootz(a,b,c)
+ printf(f"Roots of {a}x^2+{b}x+{c} is {root1} and{root2}")
+ 

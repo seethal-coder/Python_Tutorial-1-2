@@ -1,0 +1,18 @@
+
+def calculate_sum_and_average(numbers):
+    positive_sum = sum(num for num in numbers if num > 0)
+    negative_sum = sum(num for num in numbers if num < 0)
+
+    positive_average = positive_sum / len([num for num in numbers if num > 0]) if positive_sum != 0 else 0
+    negative_average = negative_sum / len([num for num in numbers if num < 0]) if negative_sum != 0 else 0
+
+    return positive_sum, negative_sum, positive_average, negative_average
+
+numbers = [int(input("Enter number {}: ".format(i+1))) for i in range(4)]
+
+positive_sum, negative_sum, positive_average, negative_average = calculate_sum_and_average(numbers)
+
+print("Sum of positive numbers:", positive_sum)
+print("Sum of negative numbers:", negative_sum)
+print("Average of positive numbers:", positive_average)
+print("Average of negative numbers:", negative_average)

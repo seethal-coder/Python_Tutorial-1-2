@@ -1,0 +1,14 @@
+
+def power(N,X):
+ res = N ** X 
+ print(res)
+
+N=int(input("enter the base"))
+X=int(input("enter the exponent"))
+
+ if(N==0):
+  print("0")
+ elif(X==0):
+ print("1")
+ else:
+  power(N,X)

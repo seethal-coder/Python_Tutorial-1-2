@@ -1,0 +1,8 @@
+def sec(seconds):
+  hour=seconds//3600
+  min=(seconds%3600)//60
+  sec=seconds%60
+  return f"{hours:02d:{min:02d}:{sec:02d}
+  
+seconds=int(input("enter time in seconds.."))
+print(sec(seconds))

@@ -1,0 +1,10 @@
+
+def sum_of_odd_numbers(lower, upper):
+    return sum(i for i in range(lower, upper+1) if i % 2 != 0)
+
+lower = int(input("Enter the lower limit: "))
+upper = int(input("Enter the upper limit: "))
+
+
+sum_of_odd = sum_of_odd_numbers(lower, upper)
+print("The sum of odd numbers between", lower, "and", upper, "is:", sum_of_odd)

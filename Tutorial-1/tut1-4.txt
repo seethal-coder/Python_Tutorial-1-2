@@ -1,0 +1,12 @@
+def comp(a,b):
+  if(a==b):
+  print(f"The number{a} and {b} are equal")
+  elif(a>b):
+  print(f"the number{a} is greater than {b}")
+  else:
+  print(f"The number {b}is greater..")
+a=int(input("enter the first number")
+b=int(input("enter the second number")
+comp(a,b)
+  
+  

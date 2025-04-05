@@ -1,0 +1,13 @@
+
+def numbers_divisible_by_9(start, end):
+    numbers = [i for i in range(start, end+1) if i % 9 == 0]
+    return numbers
+
+start = 100
+end = 1000
+
+numbers = numbers_divisible_by_9(start, end)
+
+
+print("Numbers divisible by 9 between", start, "and", end, ":")
+print(numbers)

@@ -1,0 +1,20 @@
+
+def find_quadrant(x, y):
+    if x > 0 and y > 0:
+        return "First Quadrant"
+    elif x < 0 and y > 0:
+        return "Second Quadrant "
+    elif x < 0 and y < 0:
+        return "Third Quadrant "
+    elif x > 0 and y < 0:
+        return "Fourth Quadrant"
+    elif x == 0 and y == 0:
+        return "Origin (0, 0)"
+    elif x == 0:
+        return "Y-axis"
+    elif y == 0:
+        return "X-axis"
+x = float(input("Enter the x-coordinate: "))
+y = float(input("Enter the y-coordinate: "))
+print(find_quadrant(x, y))
+

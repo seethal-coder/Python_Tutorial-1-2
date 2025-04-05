@@ -1,0 +1,13 @@
+
+def count_even_odd(numbers):
+    even_count = len(1 for num in numbers if num % 2 == 0)
+    odd_count = len(numbers) - even_count
+    return even_count, odd_count
+
+numbers = input("Enter a set of numbers separated by spaces: ")
+numbers = [int(num) for num in numbers.split()]
+
+
+even_count, odd_count = count_even_odd(numbers)
+print("Even numbers:", even_count)
+print("Odd numbers:", odd_count)

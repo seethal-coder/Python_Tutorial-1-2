@@ -1,0 +1,14 @@
+Here is a Python program that checks whether a given number is an Armstrong number of n digits:
+
+```
+def is_armstrong(num, n):
+    return sum(int(digit) ** n for digit in str(num)) == num
+
+
+
+n = int(input("Enter the number of digits: "))
+num=int(input("enter the number"))
+if(is_armstrong(num,n)):
+ print(f"The number {num} is armstrong")
+else:
+print("The number{num} is not armstrong")
